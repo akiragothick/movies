@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "..\\..\\Counter.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\r\n  export let name = \"\";\r\n  export let initialCounter = 0;\r\n  export let maxCounter = 0;\r\n\r\n  let contador = initialCounter;\r\n\r\n  var handleClick = () => {\r\n    contador++;\r\n  };\r\n\r\n  $: isEventOrOdd = contador % 2 === 0 ? \"Is Even\" : \"Is Odd\";\r\n\r\n  $: {\r\n\t  if (contador > maxCounter )\r\n\t\t  contador = 0\r\n  }\r\n</script>\r\n\r\n<style>\r\n  main {\r\n    text-align: center;\r\n    padding: 1em;\r\n    max-width: 240px;\r\n    margin: 0 auto;\r\n  }\r\n\r\n  h1 {\r\n    color: #ff3e00;\r\n    text-transform: uppercase;\r\n    font-size: 4em;\r\n    font-weight: 100;\r\n  }\r\n\r\n  @media (min-width: 640px) {\r\n    main {\r\n      max-width: none;\r\n    }\r\n  }\r\n</style>\r\n\r\n<main>\r\n  <button on:click={handleClick}>cambiar nombre</button>\r\n  <h1>Hello {name}! {contador}</h1>\r\n  <p>\r\n    {isEventOrOdd}\r\n    <!-- {contador % 2 === 0 ? \"Is Even\" : \"Is Odd\"} -->\r\n  </p>\r\n</main>\r\n"
+  ],
+  "names": [],
+  "mappings": "AAoBE,IAAI,cAAC,CAAC,AACJ,UAAU,CAAE,MAAM,CAClB,OAAO,CAAE,GAAG,CACZ,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,CAAC,CAAC,IAAI,AAChB,CAAC,AAED,EAAE,cAAC,CAAC,AACF,KAAK,CAAE,OAAO,CACd,cAAc,CAAE,SAAS,CACzB,SAAS,CAAE,GAAG,CACd,WAAW,CAAE,GAAG,AAClB,CAAC,AAED,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AACzB,IAAI,cAAC,CAAC,AACJ,SAAS,CAAE,IAAI,AACjB,CAAC,AACH,CAAC"
+}
